@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 =======
 YACcoin
 =======
@@ -28,7 +27,22 @@ Hard numbers:
 718,094,991	blocks per half-life
 8,437,616,148	Total blocks in the pool
 
-My initial effort was centered around trying to really understand things like the relevance of block times.  I managed to hack together my first code from a Litecoin chain, but this link was followed for this effort: 
+License
+-------
+
+Litecoin is released under the terms of the MIT license. See `COPYING` for more
+information or see http://opensource.org/licenses/MIT.
+
+
+Inital History
+--------------
+
+My first was centered around trying to just understand things like the relevance of block times.
+I managed to hack together my first code from a Litecoin chain, but was still pretty cluelss.
+This link was then followed, after which I felt a little better, but was having some issues with the code.
 
 http://devtome.com/doku.php?id=scrypt_altcoin_cloning_guide
->>>>>>> d80fc91c46cd47637637bc312a08cfa9b4e912de
+
+Finally, I started over with a new copy of the Litecoin chain for this branch.
+
+Cassey:
