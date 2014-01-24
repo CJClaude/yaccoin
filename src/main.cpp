@@ -31,7 +31,7 @@ CTxMemPool mempool;
 unsigned int nTransactionsUpdated = 0;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
-uint256 hashGenesisBlock("0x12a765e31ffd4059bada1e25190f6e98c99d9714d334efa41a195a7e7e04bfe2");
+uint256 hashGenesisBlock("0x2d0a71a1dc8742e5644d100aa28e31a99dccedf1be446d0c30b1ab85f2a3f1a5");
 static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // YACcoin: starting difficulty is 1 / 2^12
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
@@ -2768,9 +2768,9 @@ bool InitBlockIndex() {
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1390576771;
+        block.nTime    = 1390587883;
         block.nBits    = 0x1e0ffff0;
-        block.nNonce   = 2084524493;
+        block.nNonce   = 2084660174;
 
         if (fTestNet)
         {
@@ -2785,7 +2785,7 @@ bool InitBlockIndex() {
         printf("%s\n", block.hashMerkleRoot.ToString().c_str());
         assert(block.hashMerkleRoot == uint256("0xf864a41be2ac55d7581c7e4b0e72f65e437ec1ffa672d81d81ae2cd9cfab02c1"));
 	 // If genesis block hash does not match, then generate new genesis hash.
-	 if (true && block.GetHash() != hashGenesisBlock)
+	 if (false && block.GetHash() != hashGenesisBlock)
 	 {
 	    printf("Searching for genesis block...\n");
 	    // This will figure out a valid hash and Nonce if you're
