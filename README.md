@@ -1,5 +1,5 @@
 =======
-YACcoin
+YACCoin
 =======
 
 Yet Another Cyber Coin (pronounced like the animal "yack" which it resembles in terms of usefullness)
@@ -8,9 +8,9 @@ Key stats:
 
 Project started in late January, 2014
 
-1024 coin initial payout - since its a power of 2, it will halve nicely! (Bitcoin and Litecoin initially paid 50)
+1024 coin initial payout - since its a power of 2, it will halve nicely! 
 
-2 year half life - get in early.  Besides... will anyone really be doing this is 6-10 years?  (vs. the common 4 year)
+2 year half life - get in early.  Besides... will anyone really be wanting to mine decades from now?
 
 23.5 years of coin generation (yields roughly 100X the 84M Litecoin limit)
 
@@ -30,19 +30,32 @@ Hard numbers:
 License
 -------
 
-Litecoin is released under the terms of the MIT license. See `COPYING` for more
+YACCoin is released under the terms of the MIT license. See `COPYING` for more
 information or see http://opensource.org/licenses/MIT.
 
 
-Inital History
---------------
+Credits
+--------
 
-My first was centered around trying to just understand things like the relevance of block times.
-I managed to hack together my first code from a Litecoin chain, but was still pretty cluelss.
-This link was then followed, after which I felt a little better, but was having some issues with the code.
+Obviously, primary credit has to go to the Bitcoin and Litecoin development teams without whome this project would never have been conceived of.
+
+Addition credits go to the links below:
 
 http://devtome.com/doku.php?id=scrypt_altcoin_cloning_guide
+https://bitcointalk.org/index.php?topic=149479.0
 
-Finally, I started over with a new copy of the Litecoin chain for this branch.
+And all the folks responsible for QT, MingW32, and the other tools used to build the Windows version of this.
 
-Cassey:
+Initial Development of YACCoin was under Gentoo Linux
+
+Special thanks to the folks over at http://multicoin.zapto.org:8080/ for their support
+
+Donations
+----------
+
+Although not support as of this writing, Cryptsy makes all us altcoins practical.  Please show your support by using this referral link:
+
+https://www.cryptsy.com/users/register?refid=150844
+Our trade key at Cryptsy:  588db94f3b0f7a85c7530c90c9b13246a14ca50c
+Direct BTC: 1HRWTYCwL5fA9LjbHLdRTdZ9TwU5TNMgjt
+Direct LTC: LfHFVK3SaUVuyz5kF2rYU6jFY1fsTc81ur
