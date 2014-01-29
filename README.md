@@ -6,7 +6,7 @@ Yet Another Cyber Coin (pronounced like the animal "yack" which it resembles in 
 
 Key stats:
 
-Project started in late January, 2014 - so its new enough to earn some serious coins!
+Project started in late January, 2014
 
 1024 coin initial payout - since its a power of 2, it will halve nicely! (Bitcoin and Litecoin initially paid 50)
 
