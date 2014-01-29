@@ -1112,7 +1112,7 @@ void ThreadMapPort()
             }
         }
 
-        string strDesc = "YACcoin " + FormatFullVersion();
+        string strDesc = "YACCoin " + FormatFullVersion();
 
         try {
             loop {
@@ -1203,6 +1203,7 @@ static const char *strMainNetDNSSeed[][2] = {
 static const char *strTestNetDNSSeed[][2] = {
 //    {"yaccointools.com", "testnet-seed.yaccointools.com"},
 //    {"weminemnc.com", "testnet-seed.weminemnc.com"},
+    {"yaccoin.carpenter-farms.us", "dnsseed.carpenter-farms.us"},
     {NULL, NULL}
 };
 
@@ -1220,8 +1221,10 @@ void ThreadDNSAddressSeed()
         } else {
             vector<CNetAddr> vaddr;
             vector<CAddress> vAdd;
+            printf("Checking %s\n",strDNSSeed[seed_idx][1]);
             if (LookupHost(strDNSSeed[seed_idx][1], vaddr))
             {
+                printf("Host %s found\n",strDNSSeed[seed_idx][1]);
                 BOOST_FOREACH(CNetAddr& ip, vaddr)
                 {
                     int nOneDay = 24*3600;
@@ -1758,7 +1761,7 @@ bool BindListenPort(const CService &addrBind, string& strError)
     {
         int nErr = WSAGetLastError();
         if (nErr == WSAEADDRINUSE)
-            strError = strprintf(_("Unable to bind to %s on this computer. YACcoin is probably already running."), addrBind.ToString().c_str());
+            strError = strprintf(_("Unable to bind to %s on this computer. YACCoin is probably already running."), addrBind.ToString().c_str());
         else
             strError = strprintf(_("Unable to bind to %s on this computer (bind returned error %d, %s)"), addrBind.ToString().c_str(), nErr, strerror(nErr));
         printf("%s\n", strError.c_str());
