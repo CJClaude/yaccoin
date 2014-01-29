@@ -14,7 +14,7 @@
 #include <arpa/inet.h>
 #endif
 #ifdef WIN32
-#include "winsocks.h"
+#include "winsock2.h"
 #endif
 
 #include "mruset.h"
