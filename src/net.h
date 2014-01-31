@@ -10,11 +10,11 @@
 #include <boost/foreach.hpp>
 #include <openssl/rand.h>
 
-#ifndef WIN32
-#include <arpa/inet.h>
-#endif
 #ifdef WIN32
 #include "winsock2.h"
+#endif
+#ifndef WIN32
+#include <arpa/inet.h>
 #endif
 
 #include "mruset.h"
