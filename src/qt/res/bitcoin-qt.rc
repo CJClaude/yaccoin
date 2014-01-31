@@ -26,7 +26,7 @@ BEGIN
             VALUE "InternalName",       "yaccoin-qt"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "litecoin-qt.exe"
+            VALUE "OriginalFilename",   "yaccoin-qt.exe"
             VALUE "ProductName",        "YACCoin-Qt"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
