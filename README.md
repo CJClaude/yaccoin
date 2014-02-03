@@ -18,6 +18,8 @@ Project started in late January, 2014
 
     Short form: Faster transaction, but no so fast that stale blocks become a huge problem 
     Long form: http://bitcoinmagazine.com/8972/quarkcoin-noble-intentions-wrong-approach/ 
+
+Single block difficulty adjustments - keeps it smooth (in theory), and might help prevent early spamming.
     
 Like Litecoin, YACcoin is scrypt based - a mild manored attempt at keeping it in mortal hands while still using commonly available mining tools.
 
@@ -26,6 +28,8 @@ Hard numbers:
 359,047,496	Blocks per year
 718,094,991	blocks per half-life
 8,437,616,148	Total blocks in the pool
+1.5 * 60	TargetTimespan (e.g. 90 seconds)
+1.5 * 60	TargetSpacing (e.g. 90 seconds)
 
 License
 -------
