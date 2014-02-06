@@ -2,11 +2,12 @@
 YACCoin
 =======
 
-Yet Another Cyber Coin (pronounced like the animal "yack" which it resembles in terms of usefullness)
+Yet Another Cyber Coin
+"Boldly going where so many have gone before"
 
 Key stats:
 
-Project started in late January, 2014
+Project started in late January, 2014.  
 
 1024 coin initial payout - since its a power of 2, it will halve nicely! 
 
