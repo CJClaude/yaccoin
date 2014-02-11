@@ -1071,7 +1071,7 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
     return nSubsidy + nFees;
 }
 
-static const int64 nTargetTimespan = 1.5 * 60; // YACCoin: e.g.  every block
+static const int64 nTargetTimespan = 1.5 * 60 * 1000; // YACCoin: e.g.  every 1000 blocks
 static const int64 nTargetSpacing = 1.5 * 60; // YACCoin: 1.5 minutes
 static const int64 nInterval = nTargetTimespan / nTargetSpacing;
 
