@@ -21,20 +21,25 @@ CONFIG += static
 #    BDB_LIB_PATH, OPENSSL_INCLUDE_PATH and OPENSSL_LIB_PATH respectively
 
 #
-# Settings if building under Windows - good luck!
+# UNCOMMENT ALL OF THESE TO ENABLE WINDOWS BUILDS
 #
-#BOOST_LIB_SUFFIX=-mgw48-mt-s-1_55
-#BOOST_INCLUDE_PATH=C:/deps/boost_1_55_0
-#BOOST_LIB_PATH=C:/deps/boost_1_55_0/stage/lib
+#windows:LIBS += -lshlwapi
+#LIBS += $$join(BOOST_LIB_PATH,,-L,) $$join(BDB_LIB_PATH,,-L,) $$join(OPENSSL_LIB_PATH,,-L,) $$join(QRENCODE_LIB_PATH,,-L,)
+#LIBS += -lssl -lcrypto -ldb_cxx$$BDB_LIB_SUFFIX
+#windows:LIBS += -lws2_32 -lole32 -loleaut32 -luuid -lgdi32
+#LIBS += -lboost_system-mgw46-mt-sd-1_53 -lboost_filesystem-mgw46-mt-sd-1_53 -lboost_program_options-mgw46-mt-sd-1_53 -lboost_thread-mgw46-mt-sd-1_53
+#BOOST_LIB_SUFFIX=-mgw48-mt-s-1_53
+#BOOST_INCLUDE_PATH=C:/deps/boost_1_53_0
+#BOOST_LIB_PATH=C:/deps/boost_1_53_0/stage/lib
 #BDB_INCLUDE_PATH=C:/deps/db-4.8.30.NC/build_unix
 #BDB_LIB_PATH=C:/deps/db-4.8.30.NC/build_unix
-#OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.1e/include
-#OPENSSL_LIB_PATH=C:/deps/openssl-1.0.1e
-#MINIUPNPC_INCLUDE_PATH=C:/deps/
-#MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
+#OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.1f/include
+#OPENSSL_LIB_PATH=C:/deps/openssl-1.0.1f
+#MINIUPNPC_INCLUDE_PATH=C:/deps/miniupnpc-1.8
+#MINIUPNPC_LIB_PATH=C:/deps/miniupnpc-1.8
 
 # 
-# Settings for building under Linux
+# Settings for building under Linux, comment out for Windows builds
 #
 BDB_INCLUDE_PATH=/usr/include/db4.8
 
