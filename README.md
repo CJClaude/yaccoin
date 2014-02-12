@@ -24,12 +24,14 @@ Project started in late January, 2014.
     
 Like Litecoin, YACcoin is scrypt based - a mild manored attempt at keeping it in mortal hands while still using commonly available mining tools.
 
+Blocks were premined for about 24 hours prior to launch in order to build up checkpoint data.  Those blocks are the source of giveaway coins provided during the launch.
+
 Hard numbers:
 
-359,047,496	Blocks per year
-718,094,991	blocks per half-life
-8,437,616,148	Total blocks in the pool
+8,437,616,148	Total coins in the pool
+
 1.5 * 60 * 1000	TargetTimespan (e.g. 25 hours)
+
 1.5 * 60	TargetSpacing (e.g. 90 seconds)
 
 License

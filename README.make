@@ -36,24 +36,22 @@ Remember to uncomment the Windows and comment the single Unix line in yaccoin-qt
 
 Windows "tricks":
 
-1) As built, boost, openssl, db, and miniupnpc are stored in c:/deps in their own directories
-2) The miniupnpc directory needs to have its number removed, just rename it.
-3) For reasons that totally escape me, winsock2.h is not being pulled in by net.h as coded.  This results in rpcnet.ccp to die with a "ws2tpcip.h is not compatible with winsock.h.  Include winsock2.h instead" error message.  The only workaround I found was to go into the Ming32 directory and replace winsock.h with a copy of winsock2.h.  This is an incredibly ugly hack, but got it through the compile.
-4) Anytime you change the .pro file, rerun qmake, make clean, and make.
-5) If your desperate, check out this link.  I was, and it helped me a lot.
-	https://bitcointalk.org/index.php?topic=149479.0
-6) If you happen to use Avast! anti-virus, expect it to get a workout while you build and use the environment
+First and foremost, follow this guide to get all the dependants and tools built:
 
-Once all the tools are installed and built in your Windows environment, you should just be able to:
+https://bitcointalk.org/index.php?topic=149479.0
 
-cd yaccoin
-qmake yaccoin-qt.pro
-make clean -f Makefile.Release
-make -f Makefile.Release
+All the mentioned mods for QT5 have already been done in the source tree and the yaccoin-qt.pro file should be ready for uncommenting.
 
-7)  I had problems getting miniupnpc to build cleanly, so eventually punted and did:
+At the time of launch, the following packages were used:
 
-qmake "USE_UPNP=-" yaccoin-qt.pro
-make clean -f Makefile.Release
-make -f Makefile.Release
+Boost 1_55_0
+DB 4.8.30.NC
+Miniupnpc 1.8
+openssl-1.0.1f
+QT 5.2.0
+Minww
+mingw32
+Python33
+ActivePerl-5.18.1.1800-MSWin32-x64-297570.msi
 
+Step 4.5 of the above guide, where you do the "mingw32-make -f Makefile.Release" should result in a fully static (no additional libraries require) windows executable being placed in the release subdirectory.
