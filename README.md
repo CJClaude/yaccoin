@@ -34,6 +34,12 @@ Hard numbers:
 
 1.5 * 60	TargetSpacing (e.g. 90 seconds)
 
+Ports:
+
+Listen:   6333 (16333 for testnet)
+
+JSON-RPC: 6332 (16332 for testnet)
+
 License
 -------
 
