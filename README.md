@@ -3,7 +3,7 @@ YACCoin
 =======
 
 Yet Another Cyber Coin
-"Boldly going where so many have gone before"
+"To boldly go where so many have gone before"
 
 Key stats:
 
