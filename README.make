@@ -54,4 +54,15 @@ mingw32
 Python33
 ActivePerl-5.18.1.1800-MSWin32-x64-297570.msi
 
+Don't forget to pre-make libleveldb and libmemenv before launching the Windows-QT build:
+
+cd /yaccoin/src/leveldb
+TARGET_OS=NATIVE_WINDOWS make libleveldb.a libmemenv.a
+
+Then...
+
+cd /yaccoin
+qmake yaccoin-qt.pro
+mingw32-make -f Makefile.Release
+
 Step 4.5 of the above guide, where you do the "mingw32-make -f Makefile.Release" should result in a fully static (no additional libraries require) windows executable being placed in the release subdirectory.
