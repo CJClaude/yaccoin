@@ -18,6 +18,7 @@
 using namespace std;
 using namespace boost;
 
+#define FIRST_KGW_BLOCK 7723
 //
 // Global state
 //
@@ -1235,8 +1236,7 @@ unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBl
         uint64 PastBlocksMin = PastSecondsMin / BlocksTargetSpacing;
         uint64 PastBlocksMax = PastSecondsMax / BlocksTargetSpacing;
 
-        /* Code converted to KGW at block 7723 */
-	if (pindexLast->nHeight <= 7723) return OldGetNextWorkRequired(pindexLast, pblock);
+	if (pindexLast->nHeight <= FIRST_KGW_BLOCK) return OldGetNextWorkRequired(pindexLast, pblock);
 
         return KimotoGravityWell(pindexLast, pblock, BlocksTargetSpacing, PastBlocksMin, PastBlocksMax);
 }
@@ -2234,7 +2234,8 @@ bool CBlock::AcceptBlock(CValidationState &state, CDiskBlockPos *dbp)
 
         // Check proof of work
         if (nBits != GetNextWorkRequired(pindexPrev, this))
-            return state.DoS(100, error("AcceptBlock() : incorrect proof of work"));
+	    if (nHeight < FIRST_KGW_BLOCK && nHeight > (FIRST_KGW_BLOCK+21))   /* Transition hack */
+            return state.DoS(100, error("AcceptBlock() : incorrect proof of work for height %d", nHeight));
 
         // Check timestamp against prev
         if (GetBlockTime() <= pindexPrev->GetMedianTimePast())
