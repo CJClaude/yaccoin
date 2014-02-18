@@ -22,9 +22,9 @@ Project started in late January, 2014.
 
 25 hour block difficulty adjustment (every 1000 blocks)
     
-Like Litecoin, YACcoin is scrypt based - a mild manored attempt at keeping it in mortal hands while still using commonly available mining tools.
+Like Litecoin, YACCoin is scrypt based - a mild manored attempt at keeping it in mortal hands while still using commonly available mining tools.
 
-Blocks were premined for about 24 hours prior to launch in order to build up checkpoint data.  Those blocks are the source of giveaway coins provided during the launch.
+Unlike Litecoin, YACCoin uses the Kimoto Gravity Well difficulty adjustment to provide some protection from difficulty surges.
 
 Hard numbers:
 
