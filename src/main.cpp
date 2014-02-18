@@ -2234,7 +2234,7 @@ bool CBlock::AcceptBlock(CValidationState &state, CDiskBlockPos *dbp)
 
         // Check proof of work
         if (nBits != GetNextWorkRequired(pindexPrev, this))
-	    if (nHeight < FIRST_KGW_BLOCK && nHeight > (FIRST_KGW_BLOCK+21))   /* Transition hack */
+	    if (nHeight < FIRST_KGW_BLOCK ||  nHeight > (FIRST_KGW_BLOCK+21))   /* Transition hack */
             return state.DoS(100, error("AcceptBlock() : incorrect proof of work for height %d", nHeight));
 
         // Check timestamp against prev
