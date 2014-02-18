@@ -1,3 +1,7 @@
+Original Litecoin change log:
+
+
+
 0.8.6.2 changes
 =============
 
