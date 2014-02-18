@@ -1154,21 +1154,6 @@ unsigned int static KimotoGravityWell(const CBlockIndex* pindexLast, const CBloc
     return bnNew.GetCompact();
 }
 
-unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader *pblock)
-{
-        static const int64 BlocksTargetSpacing =  1.5 * 60; // 1.5 minute
-        static const unsigned int TimeDaySeconds = 60 * 60 * 24;
-        int64 PastSecondsMin = TimeDaySeconds * 0.01;
-        int64 PastSecondsMax = TimeDaySeconds * 0.14;
-        uint64 PastBlocksMin = PastSecondsMin / BlocksTargetSpacing;
-        uint64 PastBlocksMax = PastSecondsMax / BlocksTargetSpacing;
-
-        /* Code converted to KGW at block 7723 */
-	if (pindexLast->nHeight <= 7723) return OldGetNextWorkRequired(pindexLast, pblock);
-
-        return KimotoGravityWell(pindexLast, pblock, BlocksTargetSpacing, PastBlocksMin, PastBlocksMax);
-}
-
 /*  */
 /* Pre Kimoto Gravity Well GetNextWorkRequired */
 
@@ -1239,6 +1224,21 @@ unsigned int static OldGetNextWorkRequired(const CBlockIndex* pindexLast, const 
     printf("After:  %08x  %s\n", bnNew.GetCompact(), bnNew.getuint256().ToString().c_str());
 
     return bnNew.GetCompact();
+}
+
+unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader *pblock)
+{
+        static const int64 BlocksTargetSpacing =  1.5 * 60; // 1.5 minute
+        static const unsigned int TimeDaySeconds = 60 * 60 * 24;
+        int64 PastSecondsMin = TimeDaySeconds * 0.01;
+        int64 PastSecondsMax = TimeDaySeconds * 0.14;
+        uint64 PastBlocksMin = PastSecondsMin / BlocksTargetSpacing;
+        uint64 PastBlocksMax = PastSecondsMax / BlocksTargetSpacing;
+
+        /* Code converted to KGW at block 7723 */
+	if (pindexLast->nHeight <= 7723) return OldGetNextWorkRequired(pindexLast, pblock);
+
+        return KimotoGravityWell(pindexLast, pblock, BlocksTargetSpacing, PastBlocksMin, PastBlocksMax);
 }
 
 bool CheckProofOfWork(uint256 hash, unsigned int nBits)
