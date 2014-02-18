@@ -1163,12 +1163,15 @@ unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBl
         uint64 PastBlocksMin = PastSecondsMin / BlocksTargetSpacing;
         uint64 PastBlocksMax = PastSecondsMax / BlocksTargetSpacing;
 
+        /* Code converted to KGW at block 7723 */
+	if (pindexLast->nHeight <= 7723) return OldGetNextWorkRequired(pindexLast, pblock);
+
         return KimotoGravityWell(pindexLast, pblock, BlocksTargetSpacing, PastBlocksMin, PastBlocksMax);
 }
 
 /*  */
 /* Pre Kimoto Gravity Well GetNextWorkRequired */
-/* 
+
 unsigned int static OldGetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader *pblock)
 {
    unsigned int nProofOfWorkLimit = bnProofOfWorkLimit.GetCompact();
@@ -1237,8 +1240,6 @@ unsigned int static OldGetNextWorkRequired(const CBlockIndex* pindexLast, const 
 
     return bnNew.GetCompact();
 }
-
-*/
 
 bool CheckProofOfWork(uint256 hash, unsigned int nBits)
 {
