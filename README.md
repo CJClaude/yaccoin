@@ -2,20 +2,17 @@
 YACCoin
 =======
 
-A New Star in the Cyber Currency Universe!
-
 Launched on February 12th, 2014, YACCoin was born as "Yet Another Cyber Coin".
 YACCoin then adopted the Pleiades star field image reflecting its role as a new
-star in the Cyber Currency universe.
+star in the cyber-currency universe!
 
 Why generate Yet Another Cyber Coin?  Well, for starters, it was fun!  Lots to learn, many, many 
 hours to get everything sorted out.  To my pleasant surprise, I'm meeting (virtually of course) a 
-lot of really nice people and being introduced to some great communities.  Come join us and as the 
-coin grows, hopefully we can all profit as well!
+lot of really nice people and being introduced to some great communities. 
 
 How are we different?  The development team is in this for the long run.  We have faith the coin 
 will grow, and the passion to make sure it does.  We have already been contacted by a couple of 
-vendors wishing to use the coin, so we are encouraged it will be used for more than just Exchanges.
+vendors wishing to use the coin, so we are encouraged it will be used for more than just exchanges.
 Those involved with YACCoin today (developers and a core of dedicated supporters alike) are working 
 on methods to use crypto-currencies in a manner in which it was intended: To allow the fast and 
 efficient exchange and purchasing of goods and services without the need to use expensive third 
@@ -27,7 +24,7 @@ gaming and other services deliverable via the internet and World Wide Web.
 
 For YACCoin, sustainability and growth are the most important factors and will always remain so.
 
-YACCoin! Mine today... spend tomorrow!.
+YACCoin! Mine today... spend tomorrow!
 
 ----
 
