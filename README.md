@@ -6,9 +6,10 @@ Launched on February 12th, 2014, YACCoin was born as "Yet Another Cyber Coin".
 YACCoin then adopted the Pleiades star field image reflecting its role as a new
 star in the cyber-currency universe!
 
-Why generate Yet Another Cyber Coin?  Well, for starters, it was fun!  Lots to learn, many, many 
-hours to get everything sorted out.  To my pleasant surprise, I'm meeting (virtually of course) a 
-lot of really nice people and being introduced to some great communities. 
+Why generate Yet Another Cyber Coin?  Well, for starters, it was fun and a great way to learn
+about the communities associated with cyber coins (aka crypto coins), not to mention all the 
+technical and programming challenges that needed to be overcome (both fun and educational).  Along 
+the way a great user community focused around the coin was born.
 
 How are we different?  The development team is in this for the long run.  We have faith the coin 
 will grow, and the passion to make sure it does.  We have already been contacted by a couple of 
