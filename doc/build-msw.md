@@ -69,9 +69,6 @@ DOS prompt:
 	cd \boost-1.50.0-mgw
 	bjam toolset=gcc --build-type=complete stage
 
-MiniUPnPc
----------
-UPnP support is optional, make with `USE_UPNP=` to disable it.
 
 MSYS shell:
 
