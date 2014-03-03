@@ -2,9 +2,10 @@
 YACCoin
 =======
 
-Launched on February 12th, 2014, YACCoin was born as "Yet Another Cyber Coin".
-YACCoin then adopted the Pleiades star field image reflecting its role as a new
-star in the cyber-currency universe!
+Launch date: February 12th, 2014. 
+
+History:  YACCoin was born as "Yet Another Cyber Coin".  We feel it was evolved into a new
+star in the cyber coin universe.
 
 Why generate Yet Another Cyber Coin?  Well, for starters, it was fun and a great way to learn
 about the communities associated with cyber coins (aka crypto coins), not to mention all the 
