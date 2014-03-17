@@ -32,6 +32,8 @@ qmake
 make clean
 make
 
+Please do not attempt to make and run the test program, it will fail.  Those test fail on virtually all Alt coins to some degree or another depending on how far they varied for the original Litecoin source.
+
 Remember to uncomment the Windows and comment the single Unix line in yaccoin-qt.pro when building under Windows.
 
 Windows "tricks":
