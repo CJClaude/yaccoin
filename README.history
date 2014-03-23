@@ -5,3 +5,5 @@ Feb 12,2014 - 921 blocks mined as of 8:44am
 	      Additional miners started to gather hashes for checkpointing
 March 1,2014 - Launched on the 12th, now at 21268 block, difficulty 0.18732635
                Converted to KGW a few days after launch
+March 23, 2014 - Running smoothly, converted to internal client release & protocol numbers and 
+                 tightened up address tollerance parameters.  At block 41896.

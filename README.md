@@ -12,7 +12,9 @@ about the communities associated with cyber coins (aka crypto coins), not to men
 technical and programming challenges that needed to be overcome (both fun and educational).  Along 
 the way a great user community focused around the coin was born.
 
-How are we different?  The development team is in this for the long run.  We have faith the coin 
+How are we different?  The development team is in this for the long run and are active members in
+the altcoin community - helping select other altcoins succeed and working directly with pool and 
+exchange operators as well as participating in altcoin industry forums.  We have faith the coin 
 will grow, and the passion to make sure it does.  We have already been contacted by a couple of 
 vendors wishing to use the coin, so we are encouraged it will be used for more than just exchanges.
 Those involved with YACCoin today (developers and a core of dedicated supporters alike) are working 
@@ -75,7 +77,7 @@ information or see http://opensource.org/licenses/MIT.
 Credits
 --------
 
-Obviously, primary credit has to go to the Bitcoin and Litecoin development teams without whome this project would never have been conceived of.
+Obviously, primary credit has to go to the Bitcoin and Litecoin development teams without whome this project would never have been conceived of.  The wallet code was cloned from the 0.8.6.2 release of Litecoin.
 
 Addition credits go to the links below:
 
@@ -97,3 +99,4 @@ https://www.cryptsy.com/users/register?refid=150844
 Our trade key at Cryptsy:  588db94f3b0f7a85c7530c90c9b13246a14ca50c
 Direct BTC: 1HRWTYCwL5fA9LjbHLdRTdZ9TwU5TNMgjt
 Direct LTC: LfHFVK3SaUVuyz5kF2rYU6jFY1fsTc81ur
+Direct YACC: DYgruunQ6SDeXr1nb94UuWknzB2C1KM2WV

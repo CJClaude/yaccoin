@@ -586,9 +586,9 @@ bool CNode::Misbehaving(int howmuch)
     }
 
     nMisbehavior += howmuch;
-    if (nMisbehavior >= GetArg("-banscore", 100))
+    if (nMisbehavior >= GetArg("-banscore", 16))  /* Litecoin default of 100 */
     {
-        int64 banTime = GetTime()+GetArg("-bantime", 60*60*24);  // Default 24-hour ban
+        int64 banTime = GetTime()+GetArg("-bantime", 60*60*4);  // Litecoin default 24-hour ban, reduced ro 4
         printf("Misbehaving: %s (%d -> %d) DISCONNECTING\n", addr.ToString().c_str(), nMisbehavior-howmuch, nMisbehavior);
         {
             LOCK(cs_setBanned);
@@ -1193,6 +1193,13 @@ void MapPort(bool)
 // The second name should resolve to a list of seed addresses.
 static const char *strMainNetDNSSeed[][2] = {
     {"yaccoin.org", "dnsseed.yaccoin.org"},
+    {"cassey 1", "spoe.carpenter-farms.us"},
+    {"cassey 2", "ngspoe.carpenter-farms.us"},
+    {"tf2honeybadger 1", "coins.inceptioncraft.net"},
+    {"bob 1", "176.58.88.153"},
+    {"bob 2", "176.58.92.169"},
+    {"bob 3", "176.58.92.170"},
+
 //    {"yaccoinpool.org", "dnsseed.yaccoinpool.org"},
 //    {"xurious.com", "dnsseed.ltc.xurious.com"},
 //    {"koin-project.com", "dnsseed.koin-project.com"},
