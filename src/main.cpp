@@ -2351,6 +2351,8 @@ bool ProcessBlock(CValidationState &state, CNode* pfrom, CBlock* pblock, CDiskBl
         bnRequired.SetCompact(ComputeMinWork(pcheckpoint->nBits, deltaTime));
         if (bnNewBlock > bnRequired)
         {
+	    printf("bnNewBlock= %s\n",bnNewBlock.ToString().c_str());
+	    printf("bnRequired= %s\n",bnRequired.ToString().c_str());
             return state.DoS(100, error("ProcessBlock() : block with too little proof-of-work"));
         }
     }

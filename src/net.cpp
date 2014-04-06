@@ -586,9 +586,9 @@ bool CNode::Misbehaving(int howmuch)
     }
 
     nMisbehavior += howmuch;
-    if (nMisbehavior >= GetArg("-banscore", 16))  /* Litecoin default of 100 */
+    if (nMisbehavior >= GetArg("-banscore", 100))  /* Litecoin default of 100 */
     {
-        int64 banTime = GetTime()+GetArg("-bantime", 60*60*4);  // Litecoin default 24-hour ban, reduced ro 4
+        int64 banTime = GetTime()+GetArg("-bantime", 60*60*24);  // Litecoin default 24-hour ban, reduced ro 4
         printf("Misbehaving: %s (%d -> %d) DISCONNECTING\n", addr.ToString().c_str(), nMisbehavior-howmuch, nMisbehavior);
         {
             LOCK(cs_setBanned);
@@ -772,6 +772,7 @@ void ThreadSocketHandler()
                     pnode->grantOutbound.Release();
 
                     // close socket and cleanup
+		    printf("ThreadSocketHandler Case 1: "); 
                     pnode->CloseSocketDisconnect();
                     pnode->Cleanup();
 
@@ -937,8 +938,10 @@ void ThreadSocketHandler()
             {
                 {
                     LOCK(cs_setservAddNodeAddresses);
-                    if (!setservAddNodeAddresses.count(addr))
+                    if (!setservAddNodeAddresses.count(addr)) {
+		        printf("ThreadSocketHandler Case 2: "); 
                         closesocket(hSocket);
+                	}		  
                 }
             }
             else if (CNode::IsBanned(addr))
@@ -989,8 +992,10 @@ void ThreadSocketHandler()
                         int nBytes = recv(pnode->hSocket, pchBuf, sizeof(pchBuf), MSG_DONTWAIT);
                         if (nBytes > 0)
                         {
-                            if (!pnode->ReceiveMsgBytes(pchBuf, nBytes))
+                            if (!pnode->ReceiveMsgBytes(pchBuf, nBytes)) {
+		                printf("ThreadSocketHandler Case 3: "); 
                                 pnode->CloseSocketDisconnect();
+				}
                             pnode->nLastRecv = GetTime();
                             pnode->nRecvBytes += nBytes;
                         }
@@ -999,6 +1004,7 @@ void ThreadSocketHandler()
                             // socket closed gracefully
                             if (!pnode->fDisconnect)
                                 printf("socket closed\n");
+		            printf("ThreadSocketHandler Case 4: "); 
                             pnode->CloseSocketDisconnect();
                         }
                         else if (nBytes < 0)
@@ -1009,6 +1015,7 @@ void ThreadSocketHandler()
                             {
                                 if (!pnode->fDisconnect)
                                     printf("socket recv error %d\n", nErr);
+				printf("ThreadSocketHandler Case 5: "); 
                                 pnode->CloseSocketDisconnect();
                             }
                         }
@@ -1654,9 +1661,10 @@ void ThreadMessageHandler()
                 TRY_LOCK(pnode->cs_vRecvMsg, lockRecv);
                 if (lockRecv)
                 {
-                    if (!ProcessMessages(pnode))
+                    if (!ProcessMessages(pnode)) {
+		        printf("ThreadSocketHandler Case 7: "); 
                         pnode->CloseSocketDisconnect();
-
+                        }
                     if (pnode->nSendSize < SendBufferSize())
                     {
                         if (!pnode->vRecvGetData.empty() || (!pnode->vRecvMsg.empty() && pnode->vRecvMsg[0].complete()))

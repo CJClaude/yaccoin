@@ -144,7 +144,7 @@ public:
 #define ADDRMAN_TRIED_ENTRIES_INSPECT_ON_EVICT 4
 
 // how old addresses can maximally be
-#define ADDRMAN_HORIZON_DAYS 3   /* Litecoin default of 30 */
+#define ADDRMAN_HORIZON_DAYS 10  /* Litecoin default of 30 */
 
 // after how many failed attempts we give up on a new node
 #define ADDRMAN_RETRIES 3

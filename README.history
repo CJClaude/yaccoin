@@ -7,3 +7,5 @@ March 1,2014 - Launched on the 12th, now at 21268 block, difficulty 0.18732635
                Converted to KGW a few days after launch
 March 23, 2014 - Running smoothly, converted to internal client release & protocol numbers and 
                  tightened up address tollerance parameters.  At block 41896.
+March 25, 2014 - Having some block-chain sync issues, some of the time, for some people.  
+                 Investigating.
