@@ -9,3 +9,6 @@ March 23, 2014 - Running smoothly, converted to internal client release & protoc
                  tightened up address tollerance parameters.  At block 41896.
 March 25, 2014 - Having some block-chain sync issues, some of the time, for some people.  
                  Investigating.
+April 7th, 2014 - Things have been going well the past few weeks.  A few issues with new users 
+                  hanging during initial syncs we are not happy with, but restarts fix that.
+		  Pushed a new version to track openssl-1.0.1.g "Heartbreak" fix adoption.
