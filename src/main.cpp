@@ -1117,6 +1117,7 @@ unsigned int static KimotoGravityWell(const CBlockIndex* pindexLast, const CBloc
         double EventHorizonDeviationFast;
         double EventHorizonDeviationSlow;
 
+    printf("Difficulty Retarget - Kimoto Gravity Well\n");
     if (BlockLastSolved == NULL || BlockLastSolved->nHeight == 0 || (uint64)BlockLastSolved->nHeight < PastBlocksMin) { return bnProofOfWorkLimit.GetCompact(); }
         
 //	int64 LatestBlockTime = BlockLastSolved->GetBlockTime();  /* KGW TW fix */
@@ -1166,6 +1167,11 @@ unsigned int static KimotoGravityWell(const CBlockIndex* pindexLast, const CBloc
                 bnNew /= PastRateTargetSeconds;
         }
     if (bnNew > bnProofOfWorkLimit) { bnNew = bnProofOfWorkLimit; }
+
+    printf("PastRateAdjustmentRatio = %g\n", PastRateAdjustmentRatio);
+    printf("Before: %08x %s\n", BlockLastSolved->nBits, CBigNum().SetCompact(BlockLastSolved->nBits).getuint256().ToString().c_str());
+    printf("After: %08x %s\n", bnNew.GetCompact(), bnNew.getuint256().ToString().c_str());
+
 
     return bnNew.GetCompact();
 }
@@ -2341,6 +2347,7 @@ bool CBlockIndex::IsSuperMajority(int minVersion, const CBlockIndex* pstart, uns
 bool ProcessBlock(CValidationState &state, CNode* pfrom, CBlock* pblock, CDiskBlockPos *dbp)
 {
     // Check for duplicate
+    LOCK(cs_main);
     uint256 hash = pblock->GetHash();
     if (mapBlockIndex.count(hash))
         return state.Invalid(error("ProcessBlock() : already have block %d %s", mapBlockIndex[hash]->nHeight, hash.ToString().c_str()));
