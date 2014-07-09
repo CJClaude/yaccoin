@@ -5,7 +5,6 @@ On linux, a Gentoo distribution was used.  Key packages installed were:
 Boost 1.53.0
 openssl 1.0.1f
 db 4.8
-miniupnpc 1.8 (required unless you specify "USE_UPNP=-" during builds
 
 Under windows, the system was built natively using:
 
@@ -15,7 +14,6 @@ qt-win-opensource-4.8.5-mingw
 boost_1_53_0
 openssl-1.0.1f
 db-4.8.30.NC
-miniupnpc-1.8
 
 The unix binaries and unix-QT image should build cleanly without any issues using the included makefiles.
 
